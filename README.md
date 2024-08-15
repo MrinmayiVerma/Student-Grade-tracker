@@ -37,7 +37,7 @@ The Grade Tracker is a Java-based application designed to help students track an
 - Calculates letter grades and GPAs automatically
 - User-friendly interface makes it easy to use and navigate
 
-#Target Audience:
+# Target Audience:
 
 - Students in high school or college
 - Teachers or educators who want to track student grades
