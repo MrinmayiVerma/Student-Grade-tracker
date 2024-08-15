@@ -1,101 +1,44 @@
-# Student-Grade-tracker
- The Grade Tracker is a Java-based application designed to help students track and manage their grades across various subjects. The application provides a user-friendly interface for adding grades, displaying grades, calculating average grades, and determining letter grades and GPAs.
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+# Name: Mrinmayi Verm
+# Company: CODTECH IT SOLUTIONS
+# ID: CT08DS5771
+# DOMAIN: JAVA PROGRAMMING
+# DURATION: AUGUST 1st,2024 to SEPTEMBER 1st,2024
+# MENTOR: Muzammil Ahmed 
+# Project : Student Grade Tracker
 
-public class GradeTracker {
+# Description:
 
-    private Map<String, Double> grades;
-    private double totalGrade;
-    private int count;
+The Grade Tracker is a Java-based application designed to help students track and manage their grades across various subjects. The application provides a user-friendly interface for adding grades, displaying grades, calculating average grades, and determining letter grades and GPAs.
 
-    public GradeTracker() {
-        this.grades = new HashMap<>();
-        this.totalGrade = 0.0;
-        this.count = 0;
-    }
+# Features:
 
-    public void addGrade(String subject, double grade) {
-        grades.put(subject, grade);
-        totalGrade += grade;
-        count++;
-    }
+- Add grades for different subjects with corresponding scores
+- Display all added grades in a clear and organized format
+- Calculate the average grade based on all added grades
+- Determine the letter grade (A, B, C, D, or F) corresponding to the average grade
+- Calculate the GPA (Grade Point Average) based on the average grade
+- User-friendly menu-driven interface for easy navigation and operation
 
-    public void displayGrades() {
-        System.out.println("Grades:");
-        for (Map.Entry<String, Double> entry : grades.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
-        }
-    }
+# How it Works:
 
-    public void calculateAverageGrade() {
-        double averageGrade = totalGrade / count;
-        System.out.println("Average Grade: " + averageGrade);
-        System.out.println("Letter Grade: " + getLetterGrade(averageGrade));
-        System.out.println("GPA: " + getGPA(averageGrade));
-    }
+- The user runs the application and is presented with a menu of options.
+- The user can choose to add a grade, display grades, calculate the average grade, or exit the application.
+- When adding a grade, the user is prompted to enter the subject and grade score.
+- The application stores the added grades in a internal database.
+- When displaying grades, the application shows all added grades in a clear and organized format.
+- When calculating the average grade, the application sums up all added grades and divides by the number of grades.
+- The application then determines the corresponding letter grade and GPA based on the average grade.
+- The user can repeat these steps as needed to manage their grades.
 
-    private String getLetterGrade(double grade) {
-        if (grade >= 90) {
-            return "A";
-        } else if (grade >= 80) {
-            return "B";
-        } else if (grade >= 70) {
-            return "C";
-        } else if (grade >= 60) {
-            return "D";
-        } else {
-            return "F";
-        }
-    }
+# Benefits:
 
-    private double getGPA(double grade) {
-        if (grade >= 90) {
-            return 4.0;
-        } else if (grade >= 80) {
-            return 3.0;
-        } else if (grade >= 70) {
-            return 2.0;
-        } else if (grade >= 60) {
-            return 1.0;
-        } else {
-            return 0.0;
-        }
-    }
+- Helps students keep track of their grades and stay organized
+- Provides a clear and concise view of grades and average grades
+- Calculates letter grades and GPAs automatically
+- User-friendly interface makes it easy to use and navigate
 
-    public static void main(String[] args) {
-        GradeTracker tracker = new GradeTracker();
-        try (Scanner scanner = new Scanner(System.in)) {
-            while (true) {
-                System.out.println("1. Add Grade");
-                System.out.println("2. Display Grades");
-                System.out.println("3. Calculate Average Grade");
-                System.out.println("4. Exit");
-                System.out.print("Choose an option: ");
-                int option = scanner.nextInt();
+#Target Audience:
 
-                switch (option) {
-                    case 1:
-                        System.out.print("Enter subject: ");
-                        String subject = scanner.next();
-                        System.out.print("Enter grade: ");
-                        double grade = scanner.nextDouble();
-                        tracker.addGrade(subject, grade);
-                        break;
-                    case 2:
-                        tracker.displayGrades();
-                        break;
-                    case 3:
-                        tracker.calculateAverageGrade();
-                        break;
-                    case 4:
-                        System.exit(0);
-                        break;
-                    default:
-                        System.out.println("Invalid option. Please choose a valid option.");
-                }
-            }
-        }
-    }
-}
+- Students in high school or college
+- Teachers or educators who want to track student grades
+- Anyone who needs to manage and track grades for multiple subjects.
