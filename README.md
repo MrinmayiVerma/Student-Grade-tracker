@@ -36,3 +36,10 @@ The Grade Tracker is a Java-based application designed to help students track an
 - Students in high school or college
 - Teachers or educators who want to track student grades
 - Anyone who needs to manage and track grades for multiple subjects.
+
+## Technologies Used
+
+- Python
+- Flask
+- HTML/CSS
+
