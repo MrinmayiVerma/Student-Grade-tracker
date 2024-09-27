@@ -1,9 +1,3 @@
-# Name: Mrinmayi Verm
-# Company: CODTECH IT SOLUTIONS
-# ID: CT08DS5771
-# DOMAIN: JAVA PROGRAMMING
-# DURATION: AUGUST 1st,2024 to SEPTEMBER 1st,2024
-# MENTOR: Muzammil Ahmed 
 # Project : Student Grade Tracker
 
 # Description:
